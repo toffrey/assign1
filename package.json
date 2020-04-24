@@ -1,6 +1,7 @@
 {
   "name": "seng365-petition-site-api",
   "version": "0.0.1",
+  "main": "app.js",
   "scripts": {
     "start": "node server.js",
     "debug": "node --trace-warnings %NODE_DEBUG_OPTION% server.js"

@@ -11,6 +11,7 @@ module.exports = function () {
     // MIDDLEWARE
     app.use(allowCrossOriginRequestsMiddleware);
     app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.raw({ type: 'text/plain' }));  // for the /executeSql endpoint
 
     // DEBUG (you can remove these)
@@ -25,6 +26,7 @@ module.exports = function () {
 
     // ROUTES
     require('../app/routes/backdoor.routes')(app);
+    require('../app/routes/user.server.routes.js')(app);
 
     return app;
 };
